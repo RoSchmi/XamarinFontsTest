@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinFontsTest"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"             
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="XamarinFontsTest.MainPage"
+             Title="Graphs">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height= "400"/>
+            <RowDefinition Height = "400"/>
+        </Grid.RowDefinitions>
+    <StackLayout Grid.Row="0">
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Show next Font"  BorderWidth="1" Clicked= "Button_Clicked"/>
+                <Button Text="Show last Font"  BorderWidth="1" Clicked= "Button_Last_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+        
+        <skia:SKCanvasView x:Name="canvasView" Grid.Row="1"  MinimumHeightRequest="4000"  PaintSurface="canvasView_PaintSurface"/>
+
+    </Grid>
+</ContentPage>
